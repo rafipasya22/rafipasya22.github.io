@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav
+      class="navbar navbar-expand-sm fixed-top"
+      style="padding-left: 15rem; padding-right: 15rem"
+    >
+      <div class="container-fluid">
+        <a id="navbar-brand" class="navbar-brand fw-bold" href="#home"
+          >Rafi <span>Pasya</span></a
+        >
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active home" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link layanan" href="#tentang-saya">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#layanan">Services</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <nav
+      class="navbar navbar-mobile sticky-bottom"
+      style="overflow-y: hidden !important"
+    >
+      <div
+        class="container-fluid d-flex justify-content-between align-items-start flex-row"
+      >
+        <a id="navbar-brand" class="navbar-brand fw-bold" href="#home"
+          >Rafi <span>Pasya</span></a
+        >
+        <a
+          class="nav-link active home"
+          type="button"
+          onclick="event.preventDefault(); showmenu();"
+          ><span class="material-symbols-outlined" style="color: black">
+            menu
+          </span></a
+        >
+      </div>
+    </nav>
+
+    <div
+      id="backdrop"
+      class="custom-backdrop d-none"
+      onclick="hidemenu()"
+    ></div>
+
+    <div
+      class="menu-bottom d-flex justify-content-center flex-column gap-4"
+      style="z-index: 1040 !important"
+    >
+      <div
+        class="container-top d-flex justify-content-between align-items-center gap-2"
+      >
+        <div
+          class="square active d-flex justify-content-center align-items-center flex-column"
+        >
+          <a
+            class="square-link d-flex justify-content-center align-items-center flex-column"
+            href="#home"
+            ><span class="material-symbols-outlined"> home </span>
+            <p style="margin: 0 !important">Home</p></a
+          >
+        </div>
+        <div
+          class="square d-flex justify-content-center align-items-center flex-column"
+        >
+          <a
+            class="square-link d-flex justify-content-center align-items-center flex-column"
+            href="#tentang-saya"
+            ><span class="material-symbols-outlined"> account_box </span>
+            <p style="margin: 0 !important">About</p></a
+          >
+        </div>
+        <div
+          class="square d-flex justify-content-center align-items-center flex-column"
+        >
+          <a
+            class="square-link d-flex justify-content-center align-items-center flex-column"
+            href="#skills"
+            ><span class="material-symbols-outlined"> sdk </span>
+            <p style="margin: 0 !important">Skills</p></a
+          >
+        </div>
+      </div>
+      <div
+        class="container-top d-flex justify-content-between align-items-center gap-2"
+      >
+        <div
+          class="square d-flex justify-content-center align-items-center flex-column"
+        >
+          <a
+            class="square-link d-flex justify-content-center align-items-center flex-column"
+            href="#layanan"
+            ><span class="material-symbols-outlined"> design_services </span>
+            <p style="margin: 0 !important">Services</p></a
+          >
+        </div>
+        <div
+          class="square d-flex justify-content-center align-items-center flex-column"
+        >
+          <a
+            class="square-link d-flex justify-content-center align-items-center flex-column"
+            href="#proj"
+            ><span class="material-symbols-outlined">
+              heap_snapshot_multiple
+            </span>
+            <p style="margin: 0 !important">Projects</p></a
+          >
+        </div>
+        <div
+          class="square d-flex justify-content-center align-items-center flex-column"
+        >
+          <a
+            class="square-link d-flex justify-content-center align-items-center flex-column"
+            href="#contact"
+            ><span class="material-symbols-outlined"> call_end </span>
+            <p style="margin: 0 !important">Contact</p></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="socials show d-flex align-items-center justify-content-start flex-column"
+    >
+      <a href="https://github.com/rafipasya22"><i class="fab fa-github"></i></a>
+      <a
+        href="https://www.linkedin.com/in/muhamad-rafi-pasya-martadisastra-3561082b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        ><i class="fa-brands fa-linkedin-in"></i>
+      </a>
+    </div>
+
+    <div class="content">
+      <!--home-->
+      <section
+        id="home"
+        class="d-flex justify-content-between align-items-center flex-column"
+      >
+        <div
+          class="container d-flex align-items-center justify-content-between flex-row"
+        >
+          <div
+            class="text d-flex justify-content-evenly flex-column align-items-start"
+            data-aos="fade-right"
+          >
+            <h1>Hi, I'm <span>Rafi</span></h1>
+            <small>Software Engineer</small>
+            <p style="font-size: 1.4em">
+              Undergraduate Computer Engineering Student from Universitas
+              Pendidikan Indonesia with experience in Python, SQL and
+              JavaScript. Strong Interest in all things data analytics and UI/UX
+              design
+            </p>
+            <a
+              href="https://www.linkedin.com/in/muhamad-rafi-pasya-martadisastra-3561082b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              class="buttonconnect smoothscroll"
+              >Connect with me!</a
+            >
+          </div>
+          <div class="image">
+            <img
+              class="rounded-circle"
+              src="./img/asdasdaw.png"
+              style="
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+                background-color: red !important;
+              "
+              alt=""
+            />
+          </div>
+        </div>
+
+        <a
+          href="#tentang-saya"
+          class="scroll d-flex justify-content-center align-items-center"
+          ><small>Scroll</small>
+          <i class="material-symbols-outlined" style="color: red">
+            keyboard_double_arrow_down
+          </i></a
+        >
+      </section>
+
+      <!--Tentang Saya-->
+      <section id="tentang-saya" style="margin-top: 5rem">
+        <div class="site-section" id="about-section">
+          <div
+            class="container d-flex justify-content-cebter align-items-center flex-column"
+          >
+            <div class="row">
+              <h1
+                id="perk2"
+                class="display-4 text-center"
+                style="margin-bottom: 0 !important"
+              >
+                About <span>Myself</span>
+              </h1>
+              <small class="text-center">know me better!</small>
+              <div
+                class="image-myself bg-light d-flex justify-content-center align-items-center"
+              >
+                <img src="./img/asdasdaw.png" alt="Image" class="img-fluid" />
+              </div>
+            </div>
+            <div
+              class="analytics d-flex justify-content-evenly align-items-center flex-row"
+            >
+              <div
+                class="first d-flex justify-content-start align-items-start flex-row"
+                data-aos="fade-right"
+              >
+                <div
+                  class="square d-flex justify-content-center align-items-center"
+                >
+                  <span>1</span>
+                  <div
+                    class="plus"
+                    style="
+                      position: absolute;
+                      transform: translateX(2.2rem) translateY(38px);
+                    "
+                  >
+                    +
+                  </div>
+                </div>
+                <div class="text ms-4">
+                  <p style="margin-top: 0">Year Hands on Experience</p>
+                </div>
+              </div>
+              <div
+                class="first d-flex justify-content-start align-items-start flex-row"
+                data-aos="fade-up"
+              >
+                <div
+                  class="square d-flex justify-content-center align-items-center"
+                >
+                  <span>4</span>
+                  <div
+                    class="plus"
+                    style="
+                      position: absolute;
+                      transform: translateX(2.2rem) translateY(38px);
+                    "
+                  >
+                    +
+                  </div>
+                </div>
+                <div class="text ms-4">
+                  <p style="margin-top: 0">Projects Completed</p>
+                </div>
+              </div>
+              <div
+                class="first d-flex justify-content-start align-items-start flex-row"
+                data-aos="fade-left"
+              >
+                <div
+                  class="square d-flex justify-content-center align-items-center"
+                >
+                  <span>1</span>
+                  <div
+                    class="plus"
+                    style="
+                      position: absolute;
+                      transform: translateX(2.2rem) translateY(38px);
+                    "
+                  >
+                    +
+                  </div>
+                </div>
+                <div class="text ms-4">
+                  <p style="margin-top: 0">Internship Experience</p>
+                </div>
+              </div>
+            </div>
+            <p class="myself-def">
+              Undergraduate Computer Engineering Student from Universitas
+              Pendidikan Indonesia with experience in Python, SQL and
+              JavaScript. Strong Interest in all things data analytics and UI/UX
+              design. Also eager to learn more!
+            </p>
+            <a
+              href="file\CV_Muhamad Rafi Pasya Martadisastra.pdf"
+              download
+              class="buttonconnect smoothscroll d-flex justify-content-start align-items-center flex-row mt-4"
+              >Download CV
+              <span class="material-symbols-outlined ms-2">
+                place_item
+              </span></a
+            >
+            <h5
+              id="perk2"
+              class="display-4 text-center mt-5"
+              style="margin-bottom: 0 !important; font-size: 2em"
+            >
+              Academic <span>Journey</span>
+            </h5>
+            <div class="mt-4" style="position: relative">
+              <div class="timeline">
+                <div class="circle top"></div>
+                <div class="circle bottom"></div>
+              </div>
+              <div class="text-right" data-aos="fade-up">
+                <strong>SMAN 1 Bandung</strong><br />
+                <span class="subtext">2018 – 2021</span>
+              </div>
+              <div class="text-left" data-aos="fade-up">
+                <strong>Universitas Pendidikan Indonesia</strong><br />
+                <span class="subtext">2022 - Now</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Skills-->
+      <section id="skills" style="margin-top: 7rem">
+        <div class="site-section" id="about-section">
+          <div
+            class="container d-flex justify-content-cebter align-items-center flex-column"
+          >
+            <div class="row">
+              <h1
+                id="perk2"
+                class="display-4 text-center"
+                style="margin-bottom: 0 !important"
+              >
+                My <span>Skillset</span>
+              </h1>
+              <small class="text-center">what can i do</small>
+
+              <div
+                class="skills-top d-flex justify-content-between align-items-center flex-row"
+                style="margin-top: 5rem"
+              >
+                <div class="frontend ms-2" data-aos="fade-right">
+                  <h5 style="font-weight: bold">Front-end Development</h5>
+                  <div
+                    class="skill-items d-flex justify-content-start align-items-start flex-column gap-5 mt-4"
+                  >
+                    <div
+                      class="skill d-flex justify-content-start align-items-start flex-row gap-2"
+                    >
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png"
+                        alt=""
+                      />
+                      <div
+                        class="skill-text d-flex justify-content-start align-items-start flex-column"
+                      >
+                        <p
+                          style="margin: 0; font-size: 1.3em; font-weight: bold"
+                        >
+                          Vue.Js
+                        </p>
+                        <small style="color: grey">Proficient</small>
+                      </div>
+                    </div>
+                    <div
+                      class="skill d-flex justify-content-start align-items-start flex-row gap-2"
+                    >
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                        alt=""
+                      />
+                      <div
+                        class="skill-text d-flex justify-content-start align-items-start flex-column"
+                      >
+                        <p
+                          style="margin: 0; font-size: 1.3em; font-weight: bold"
+                        >
+                          JavaScript
+                        </p>
+                        <small style="color: grey">Proficient</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="backend me-2" data-aos="fade-left">
+                  <h5 style="font-weight: bold">Back-end Development</h5>
+                  <div
+                    class="skills-container d-flex justify-content-between align-items-center flex-row"
+                  >
+                    <div class="skill-left">
+                      <div
+                        class="skill-items d-flex justify-content-start align-items-start flex-column gap-5 mt-4"
+                      >
+                        <div
+                          class="skill d-flex justify-content-start align-items-start flex-row gap-2"
+                        >
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQqX699Ii1yOe0IYdJ3SmuIA8DFyIMgRKLQ&s"
+                            alt=""
+                            style="width: 40px; height: 40px"
+                          />
+                          <div
+                            class="skill-text d-flex justify-content-start align-items-start flex-column"
+                          >
+                            <p
+                              style="
+                                margin: 0;
+                                font-size: 1.3em;
+                                font-weight: bold;
+                              "
+                            >
+                              Flask
+                            </p>
+                            <small style="color: grey">Proficient</small>
+                          </div>
+                        </div>
+                        <div
+                          class="skill d-flex justify-content-start align-items-start flex-row gap-2"
+                        >
+                          <img
+                            src="https://gitlab.com/uploads/-/system/project/avatar/33491624/fastapi.png"
+                            alt=""
+                            style="width: 42px; height: 40px"
+                          />
+                          <div
+                            class="skill-text d-flex justify-content-start align-items-start flex-column"
+                          >
+                            <p
+                              style="
+                                margin: 0;
+                                font-size: 1.3em;
+                                font-weight: bold;
+                              "
+                            >
+                              FastAPI
+                            </p>
+                            <small style="color: grey">Proficient</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="skill-right">
+                      <div
+                        class="skill-items d-flex justify-content-start align-items-start flex-column mt-4"
+                      >
+                        <div
+                          class="skill d-flex justify-content-start align-items-start flex-row gap-2"
+                        >
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/PHP_Logo%2C_text_only.svg/800px-PHP_Logo%2C_text_only.svg.png"
+                            alt=""
+                            style="width: 40px !important; height: 20px"
+                          />
+                          <div
+                            class="skill-text d-flex justify-content-start align-items-start flex-column"
+                          >
+                            <p
+                              style="
+                                margin: 0;
+                                font-size: 1.3em;
+                                font-weight: bold;
+                              "
+                            >
+                              PHP
+                            </p>
+                            <small style="color: grey">Proficient</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="skills-bottom d-flex justify-content-center align-items-center flex-column"
+                style="margin-top: 5rem"
+                data-aos="fade-up"
+              >
+                <div class="frontend ms-2">
+                  <h5 style="font-weight: bold">Mobile Apps Development</h5>
+                  <div
+                    class="skill-items d-flex justify-content-center align-items-center flex-column mt-4"
+                    style="transform: translateX(-10px) !important"
+                  >
+                    <div
+                      class="skill d-flex justify-content-center align-items-center flex-row gap-2"
+                    >
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flutter_logo.svg/2048px-Flutter_logo.svg.png"
+                        alt=""
+                      />
+                      <div
+                        class="skill-text d-flex justify-content-center align-items-center flex-column"
+                      >
+                        <p
+                          style="margin: 0; font-size: 1.3em; font-weight: bold"
+                        >
+                          Flutter
+                        </p>
+                        <small style="color: grey">Proficient</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--layanan-->
+      <section id="layanan">
+        <div class="container-fluid layanan pt-5 pb-5">
+          <div class="text-center">
+            <div class="container">
+              <h1
+                id="perk2"
+                class="display-4 text-center"
+                style="margin-bottom: 0 !important; color: black !important"
+              >
+                <span>Services</span>
+              </h1>
+              <small class="text-center">what I’m offering</small>
+              <div class="row pt-4">
+                <div
+                  class="services-top d-flex justify-content-between align-items-center flex-row"
+                >
+                  <div class="card" style="width: 18rem" data-aos="fade-up">
+                    <img
+                      src="
+                      img\code_40dp_FB0000_FILL0_wght400_GRAD0_opsz40.png"
+                      style="width: 45px"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h1 class="display-4">Front-end Development</h1>
+                      <p class="card-text">
+                        Focusing on developing the user-facing part of a website
+                        or application
+                      </p>
+                    </div>
+                    <div
+                      class="card-foooter d-flex justify-content-end alignt-items-end"
+                      style="width: 100%; margin-bottom: 1rem"
+                    >
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#seemorefrontend"
+                        class="cardseemore d-flex align-items-center justify-content-center"
+                        style="
+                          color: red;
+                          text-decoration: none;
+                          cursor: pointer;
+                        "
+                        >See More
+                        <span class="material-symbols-outlined">
+                          arrow_forward_ios
+                        </span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem" data-aos="fade-up">
+                    <img
+                      src="img\api_40dp_FB0000_FILL0_wght400_GRAD0_opsz40.png"
+                      style="width: 45px"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h1 class="display-4">Back-end Development</h1>
+                      <p class="card-text">
+                        Focusing on developing the server-side part of a website
+                        or application
+                      </p>
+                    </div>
+                    <div
+                      class="card-foooter d-flex justify-content-end alignt-items-end"
+                      style="width: 100%; margin-bottom: 1rem"
+                    >
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#seemorebackend"
+                        class="cardseemore d-flex align-items-center justify-content-center"
+                        style="
+                          color: red;
+                          text-decoration: none;
+                          cursor: pointer;
+                        "
+                        >See More
+                        <span class="material-symbols-outlined">
+                          arrow_forward_ios
+                        </span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="services-bottom d-flex justify-content-center align-items-center flex-column"
+                >
+                  <div
+                    class="card d-flex justify-content-center align-items-center flex-column"
+                    style="width: 18rem"
+                    data-aos="fade-up"
+                  >
+                    <img
+                      src="img\flutter_40dp_FB0000_FILL0_wght400_GRAD0_opsz40.png"
+                      style="width: 45px"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h1 class="display-4">Mobile App Development</h1>
+                      <p class="card-text">
+                        Focusing on developing application to run on mobile
+                        devices like smartphones and tablets
+                      </p>
+                    </div>
+                    <div
+                      class="card-foooter d-flex justify-content-end alignt-items-end"
+                      style="width: 100%; margin-bottom: 1rem"
+                    >
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#seemoremobile"
+                        class="cardseemore d-flex align-items-center justify-content-center"
+                        style="
+                          color: red;
+                          text-decoration: none;
+                          cursor: pointer;
+                        "
+                        >See More
+                        <span class="material-symbols-outlined">
+                          arrow_forward_ios
+                        </span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--projects-->
+      <section id="proj">
+        <div class="text-center">
+          <h1
+            id="perk2"
+            class="display-4 text-center"
+            style="margin-bottom: 0 !important; color: black !important"
+          >
+            Recent <span>Projects</span>
+          </h1>
+          <small class="text-center">what I've built</small>
+        </div>
+        <div
+          class="projects d-flex justify-content-start align-items-start flex-column gap-5"
+          style="margin-top: 4rem"
+        >
+          <div
+            class="waduhnews d-flex justify-content-start align-items-start flex-row mb-3"
+            data-aos="fade-left"
+          >
+            <div id="waduh" class="carousel slide" style="width: 70%">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#waduh"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#waduh"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#waduh"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner" style="border-radius: 15px">
+                <div class="carousel-item active">
+                  <img
+                    src="/img/category-page(waduh).png"
+                    class="d-block w-100"
+                    style="height: 45vh"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/img/news-page.png"
+                    class="d-block w-100"
+                    style="height: 45vh"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./img/profile-page.png"
+                    class="d-block w-100"
+                    style="height: 45vh"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#waduh"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#waduh"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div
+              class="text-waduh d-flex justify-content-start align-items-start flex-column gap-3 ms-3"
+              style="width: 30%"
+            >
+              <div class="title">
+                <h1 style="font-weight: 600">Waduh News</h1>
+              </div>
+              <div class="desc">
+                Waduh News is a news portal platform that focused on
+                personalizing the news reading experience. The project was built
+                using Vue.js for the front-end and FastAPI for the back-end.
+              </div>
+              <div class="githublink">
+                <a href="#" class="buttonconnect smoothscroll"
+                  >See Project on GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="batuq d-flex justify-content-start align-items-start flex-row mb-3"
+            data-aos="fade-right"
+          >
+            <div
+              class="text-batuq d-flex justify-content-start align-items-start flex-column gap-3 me-3"
+              style="width: 30%"
+            >
+              <div class="title">
+                <h1 style="font-weight: 600">Batuq</h1>
+              </div>
+              <div class="desc">
+                Batuq is a plafrom mainly designed to facilitate effective and
+                engaging Quran Learning.
+              </div>
+              <div class="githublink">
+                <a href="#" class="buttonconnect smoothscroll"
+                  >See Project on GitHub</a
+                >
+              </div>
+            </div>
+            <div id="batuq" class="carousel slide" style="width: 70%">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#batuq"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#batuq"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#batuq"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner" style="border-radius: 15px">
+                <div class="carousel-item active">
+                  <img
+                    src="/img/batuqhome.png"
+                    class="d-block w-100"
+                    style="height: 45vh"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/img/batuqmateri.png"
+                    class="d-block w-100"
+                    style="height: 45vh"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./img/batuqquran.png"
+                    class="d-block w-100"
+                    style="height: 45vh"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#batuq"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#batuq"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="simplesync d-flex justify-content-start align-items-start flex-row mb-3"
+            data-aos="fade-left"
+          >
+            <div id="simplesync" class="carousel slide" style="width: 70%">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#waduh"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#waduh"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+              </div>
+              <div class="carousel-inner" style="border-radius: 15px">
+                <div class="carousel-item active">
+                  <img
+                    src="/img/Simplesynchome.png"
+                    class="d-block w-100"
+                    style="height: 45vh"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/img/simplesyncmeds.png"
+                    class="d-block w-100"
+                    style="height: 45vh"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#simplesync"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#simplesync"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div
+              class="text-waduh d-flex justify-content-start align-items-start flex-column gap-3 ms-3"
+              style="width: 30%"
+            >
+              <div class="title">
+                <h1 style="font-weight: 600">SimpleSync</h1>
+              </div>
+              <div class="desc">
+                SimpleSync is a software system developed to support real-time
+                fall detection and health monitoring in IoT-based wearable
+                devices.
+              </div>
+              <div class="githublink">
+                <a href="#" class="buttonconnect smoothscroll"
+                  >See Project on GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="simplesyncmobile d-flex justify-content-start align-items-start flex-row mb-3"
+            data-aos="fade-right"
+          >
+            <div
+              class="text-simplesyncmobile d-flex justify-content-start align-items-start flex-column gap-3"
+              style="width: 60%"
+            >
+              <div class="title">
+                <h1 style="font-weight: 600">SimpleSync Mobile</h1>
+              </div>
+              <div class="desc me-3">
+                SimpleSync mobile is a software system developed to support
+                real-time fall detection and health monitoring in IoT-based
+                wearable devices, but for mobile devices.
+              </div>
+              <div class="githublink">
+                <a href="#" class="buttonconnect smoothscroll">See Project</a>
+              </div>
+            </div>
+            <div
+              id="simplesyncmobile"
+              class="carousel slide"
+              style="width: 30%"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#simplesyncmobile"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#simplesyncmobile"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+              </div>
+              <div class="carousel-inner" style="border-radius: 15px">
+                <div class="carousel-item active">
+                  <img
+                    src="/img/sm1.jpg"
+                    class="d-block w-100"
+                    style="height: 70vh"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/img/sm2.jpg"
+                    class="d-block w-100"
+                    style="height: 70vh"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#simplesyncmobile"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#simplesyncmobile"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--contact-->
+      <section
+        id="contact"
+        data-aos="fade-in"
+        style="margin-top: 5rem; margin-bottom: 5rem"
+      >
+        <div class="text-center">
+          <h1
+            id="perk2"
+            class="display-4 text-center"
+            style="margin-bottom: 0 !important; color: black !important"
+          >
+            Contact <span>Me</span>
+          </h1>
+        </div>
+        <div class="pemisah">
+          <div class="content3">
+            <div class="kontak">
+              <div
+                class="contacs d-flex justify-content-evenly align-items-center flex-row mb-4"
+              >
+                <div
+                  class="phone d-flex justify-content-start align-items-center flex-row"
+                >
+                  <i style="font-size: 30px" class="fa-solid fa-phone me-2"></i>
+                  <div
+                    class="phonenumbercontent d-flex justify-content-start align-items-start flex-column"
+                  >
+                    <small>Phone Number</small>
+                    <p style="margin: 0; font-weight: bold">088971935033</p>
+                  </div>
+                </div>
+                <div
+                  class="linkedIn d-flex justify-content-start align-items-center flex-row"
+                >
+                  <i
+                    style="font-size: 30px"
+                    class="fa-brands fa-linkedin-in me-2"
+                  ></i>
+                  <div
+                    class="linkedincontent d-flex justify-content-start align-items-start flex-column"
+                  >
+                    <small>LinkedIn</small>
+                    <p style="margin: 0; font-weight: bold">
+                      Muhamad Rafi Pasya
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="email d-flex justify-content-start align-items-center flex-row"
+                >
+                  <i
+                    style="font-size: 30px"
+                    class="fa-solid fa-envelope me-2"
+                  ></i>
+
+                  <div
+                    class="emailcontent d-flex justify-content-start align-items-start flex-column"
+                  >
+                    <small>Email</small>
+                    <p style="margin: 0; font-weight: bold">
+                      rafipas101@gmail.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="location d-flex justify-content-center align-items-start flex-row gap-3"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.939174946133!2d107.6075975!3d-6.8978786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e64534cfa3f5%3A0x582bf998c07282f0!2sJl.%20Kebon%20Bibit%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040116!5e0!3m2!1sen!2sid!4v1730214809251!5m2!1sen!2sid"
+                  style="
+                    border: 0;
+                    border-radius: 15px;
+                    width: 60%;
+                    height: 250px;
+                  "
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+                <div
+                  class="locat d-flex justify-content-start align-items-start flex-column"
+                  style="width: 40%"
+                >
+                  <div
+                    class="loc d-flex justify-content-start align-items-center flex-row"
+                    style="font-weight: bold"
+                  >
+                    <span class="material-symbols-outlined"> location_on </span
+                    >Location
+                  </div>
+                  <p>
+                    Jl. Kebon Bibit No. 238/A, Taman Sari, Kec. Bandung Wetan,
+                    Kota Bandung
+                  </p>
+
+                  <a
+                    href="https://www.linkedin.com/in/muhamad-rafi-pasya-martadisastra-3561082b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    class="buttonconnect smoothscroll"
+                    >Connect with me!</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer
+      class="site-section bg-light footer"
+      style="padding-right: 17rem; padding-left: 17rem"
+    >
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <h3 style="font-weight: bold" class="footer-title">Rafi Pasya</h3>
+            <h3 class="footer-title">Address</h3>
+            <p>
+              <span class="d-inline-block d-md-block" style="color: white"
+                >Jl. Kebon Bibit No. 238/A, Taman Sari, Kec. Bandung Wetan, Kota
+                Bandung</span
+              >
+            </p>
+          </div>
+          <div class="col-md-5 mx-auto">
+            <div class="row">
+              <div class="col-lg-4">
+                <h3 class="footer-title">Services</h3>
+                <ul class="list-unstyled">
+                  <li><a href="#layanan">Front-end Development</a></li>
+                  <li><a href="#layanan">Back-end Development</a></li>
+                  <li><a href="#layanan">Mobile Apps Development</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4">
+                <h3 class="footer-title">Recent Projects</h3>
+                <ul class="list-unstyled">
+                  <li><a href="#waduh">Waduh News</a></li>
+                  <li><a href="#batuq">Batuq</a></li>
+                  <li><a href="#simplesync">SimpleSync</a></li>
+                  <li><a href="#simplesyncmobile">Simplesync Mobile</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4">
+                <h3 class="footer-title">Links</h3>
+                <ul class="list-unstyled">
+                  <li><a href="rafipas101@upi.edu">Email</a></li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/muhamad-rafi-pasya-martadisastra-3561082b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                      >LinkedIn</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://github.com/rafipasya22">GitHub</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>
+              Created with
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bootstrap-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"
+                />
+                <path
+                  d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"
+                />
+              </svg>
+              by Rafi Pasya<span class="fw-bold"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="seemoremobile"
+      tabindex="-1"
+      aria-labelledby="seemoremobileLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="border: none !important; padding-bottom: 0 !important"
+          >
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Mobile Apps Development
+            </h1>
+            <a
+              type="button"
+              class="closemodal"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="cursor: pointer"
+              ><span class="material-symbols-outlined"> close </span></a
+            >
+          </div>
+          <div class="modal-body" style="padding-top: 1rem !important">
+            <div
+              class="d-flex justify-content-start align-items-start flex-column gap-3"
+            >
+              <div
+                class="list d-flex justify-content-start align-items-center flex-row"
+              >
+                <span
+                  class="material-symbols-outlined me-2"
+                  style="color: #fb0000"
+                >
+                  priority
+                </span>
+                <p style="margin: 0; font-weight: 500">UI Design</p>
+              </div>
+              <div
+                class="list d-flex justify-content-start align-items-center flex-row"
+              >
+                <span
+                  class="material-symbols-outlined me-2"
+                  style="color: #fb0000"
+                >
+                  priority
+                </span>
+                <p style="margin: 0; font-weight: 500">API Integration</p>
+              </div>
+              <div
+                class="list d-flex justify-content-start align-items-center flex-row"
+              >
+                <span
+                  class="material-symbols-outlined me-2"
+                  style="color: #fb0000"
+                >
+                  priority
+                </span>
+                <p style="margin: 0; font-weight: 500">Data Management</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="seemorebackend"
+      tabindex="-1"
+      aria-labelledby="seemorebackendlabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="border: none !important; padding-bottom: 0 !important"
+          >
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Back-end Development
+            </h1>
+            <a
+              type="button"
+              class="closemodal"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="cursor: pointer"
+              ><span class="material-symbols-outlined"> close </span></a
+            >
+          </div>
+          <div class="modal-body" style="padding-top: 1rem !important">
+            <div
+              class="d-flex justify-content-start align-items-start flex-column gap-3"
+            >
+              <div
+                class="list d-flex justify-content-start align-items-center flex-row"
+              >
+                <span
+                  class="material-symbols-outlined me-2"
+                  style="color: #fb0000"
+                >
+                  priority
+                </span>
+                <p style="margin: 0; font-weight: 500">System Design</p>
+              </div>
+              <div
+                class="list d-flex justify-content-start align-items-center flex-row"
+              >
+                <span
+                  class="material-symbols-outlined me-2"
+                  style="color: #fb0000"
+                >
+                  priority
+                </span>
+                <p style="margin: 0; font-weight: 500">Database Design</p>
+              </div>
+              <div
+                class="list d-flex justify-content-start align-items-center flex-row"
+              >
+                <span
+                  class="material-symbols-outlined me-2"
+                  style="color: #fb0000"
+                >
+                  priority
+                </span>
+                <p style="margin: 0; font-weight: 500">API Services</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="seemorefrontend"
+      tabindex="-1"
+      aria-labelledby="seemorefrontendLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="border: none !important; padding-bottom: 0 !important"
+          >
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Front-end Development
+            </h1>
+            <a
+              type="button"
+              class="closemodal"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="cursor: pointer"
+              ><span class="material-symbols-outlined"> close </span></a
+            >
+          </div>
+          <div class="modal-body" style="padding-top: 1rem !important">
+            <div
+              class="d-flex justify-content-start align-items-start flex-column gap-3"
+            >
+              <div
+                class="list d-flex justify-content-start align-items-center flex-row"
+              >
+                <span
+                  class="material-symbols-outlined me-2"
+                  style="color: #fb0000"
+                >
+                  priority
+                </span>
+                <p style="margin: 0; font-weight: 500">UI Design</p>
+              </div>
+              <div
+                class="list d-flex justify-content-start align-items-center flex-row"
+              >
+                <span
+                  class="material-symbols-outlined me-2"
+                  style="color: #fb0000"
+                >
+                  priority
+                </span>
+                <p style="margin: 0; font-weight: 500">Web Resposiveness</p>
+              </div>
+              <div
+                class="list d-flex justify-content-start align-items-center flex-row"
+              >
+                <span
+                  class="material-symbols-outlined me-2"
+                  style="color: #fb0000"
+                >
+                  priority
+                </span>
+                <p style="margin: 0; font-weight: 500">API Integration</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const nav = document.querySelector(".navbar");
+      const socials = document.querySelector(".socials");
+      if (window.innerWidth <= 1000) {
+        console.log("gabisa");
+      } else {
+        window.addEventListener("scroll", () => {
+          if (window.scrollY >= 56) {
+            nav.classList.add("navbar-udahscroll");
+            socials.classList.remove("show");
+            socials.classList.add("hide");
+          } else if (window.scrollY < 56) {
+            nav.classList.remove("navbar-udahscroll");
+            socials.classList.remove("hide");
+            socials.classList.add("show");
+          }
+        });
+      }
+      window.addEventListener("resize", () => {
+        if (window.innerWidth <= 1000) {
+          console.log("gabisa");
+        } else {
+          window.addEventListener("scroll", () => {
+            if (window.scrollY >= 56) {
+              nav.classList.add("navbar-udahscroll");
+              socials.classList.remove("show");
+              socials.classList.add("hide");
+            } else if (window.scrollY < 56) {
+              nav.classList.remove("navbar-udahscroll");
+              socials.classList.remove("hide");
+              socials.classList.add("show");
+            }
+          });
+        }
+      });
+    </script>
+
+    <script>
+      function showmenu() {
+        document.getElementById("backdrop").classList.remove("d-none");
+        document.querySelector(".menu-bottom").classList.add("show");
+        document.body.classList.add("noscroll");
+        document.documentElement.classList.add("noscroll");
+      }
+
+      function hidemenu() {
+        document.getElementById("backdrop").classList.add("d-none");
+        document.querySelector(".menu-bottom").classList.remove("show");
+        document.body.classList.remove("noscroll");
+        document.documentElement.classList.remove("noscroll");
+      }
+    </script>
+    <script>
+      if (window.innerWidth <= 1000) {
+        window.addEventListener("scroll", function () {
+          const sections = document.querySelectorAll("section");
+          const navLinks = document.querySelectorAll(".square-link");
+
+          let currentSection = "home";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+              currentSection = section.getAttribute("id");
+            }
+          });
+
+          if (window.pageYOffset < 50) {
+            currentSection = "home";
+          }
+          navLinks.forEach((link) => {
+            link.parentElement.classList.remove("active");
+            link.parentElement.removeAttribute("aria-current");
+            if (link.getAttribute("href").substring(1) === currentSection) {
+              link.parentElement.classList.add("active");
+              link.parentElement.setAttribute("aria-current", "page");
+            }
+          });
+        });
+      } else {
+        window.addEventListener("scroll", function () {
+          const sections = document.querySelectorAll("section");
+          const navLinks = document.querySelectorAll(".nav-link");
+
+          let currentSection = "home";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+              currentSection = section.getAttribute("id");
+            }
+          });
+
+          if (window.pageYOffset < 50) {
+            currentSection = "home";
+          }
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            link.removeAttribute("aria-current");
+            if (link.getAttribute("href").substring(1) === currentSection) {
+              link.classList.add("active");
+              link.setAttribute("aria-current", "page");
+            }
+          });
+        });
+      }
+      window.addEventListener("resize", () => {
+        if (window.innerWidth <= 1000) {
+          window.addEventListener("scroll", function () {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".square-link");
+
+            let currentSection = "home";
+
+            sections.forEach((section) => {
+              const sectionTop = section.offsetTop;
+              const sectionHeight = section.clientHeight;
+
+              if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                currentSection = section.getAttribute("id");
+              }
+            });
+
+            if (window.pageYOffset < 50) {
+              currentSection = "home";
+            }
+            navLinks.forEach((link) => {
+              link.classList.remove("active");
+              link.parentElement.removeAttribute("aria-current");
+              if (link.getAttribute("href").substring(1) === currentSection) {
+                link.parentElement.classList.add("active");
+                link.parentElement.setAttribute("aria-current", "page");
+              }
+            });
+          });
+        } else {
+          window.addEventListener("scroll", function () {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            let currentSection = "home";
+
+            sections.forEach((section) => {
+              const sectionTop = section.offsetTop;
+              const sectionHeight = section.clientHeight;
+
+              if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                currentSection = section.getAttribute("id");
+              }
+            });
+
+            if (window.pageYOffset < 50) {
+              currentSection = "home";
+            }
+            navLinks.forEach((link) => {
+              link.classList.remove("active");
+              link.removeAttribute("aria-current");
+              if (link.getAttribute("href").substring(1) === currentSection) {
+                link.classList.add("active");
+                link.setAttribute("aria-current", "page");
+              }
+            });
+          });
+        }
+      });
+    </script>
+
+    <script>
+      const navbardesktop = document.querySelector(".navbar");
+      const navbarmobile = document.querySelector(".navbar-mobile");
+      if (window.innerWidth <= 1000) {
+        navbardesktop.classList.add("hide");
+        navbarmobile.classList.add("show");
+        console.log("Mobile view");
+      } else {
+        navbardesktop.classList.remove("hide");
+        navbarmobile.classList.remove("show");
+        console.log("Desktop view");
+      }
+      window.addEventListener("resize", () => {
+        if (window.innerWidth <= 1000) {
+          navbardesktop.classList.add("hide");
+          navbarmobile.classList.add("show");
+          console.log("Switched to mobile view");
+        } else {
+          navbardesktop.classList.remove("hide");
+          navbarmobile.classList.remove("show");
+        }
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
