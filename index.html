@@ -27,7 +27,8 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Rafi's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/img/icon.png" />
   </head>
   <body>
     <!--navbar-->
@@ -90,6 +91,8 @@
       class="custom-backdrop d-none"
       onclick="hidemenu()"
     ></div>
+
+    <div id="backdrop-image" class="custom-backdrop d-none" onclick="tutupbackdropuniversal()"></div>
 
     <div
       class="menu-bottom d-flex justify-content-center flex-column gap-4"
@@ -548,6 +551,103 @@
                   </div>
                 </div>
               </div>
+
+              <div
+                class="licsert d-flex align-items-center justify-content-center flex-column mt-5 gap-5"
+              >
+                <h5
+                  id="perk2"
+                  class="display-4 text-center mt-5"
+                  style="margin-bottom: 0 !important; font-size: 2em"
+                  data-aos="fade-up"
+                >
+                  Licences & <span>Certification</span>
+                </h5>
+                <div
+                  class="sert-container d-flex justify-content-start align-items-start flex-row gap-4"
+                >
+                  <div class="image">
+                    <img
+                      class="img-sert"
+                      onclick="toggleBackdrop(this)"
+                      src="/img/sertif_winnicode.png"
+                      alt="Zoomable"
+                      style="width: 300px; height: 180px"
+                    />
+                  </div>
+                  <div class="image">
+                    <img
+                      class="img-sert"
+                      onclick="toggleBackdrop(this);"
+                      src="/img/sertif_ML_pemula.png"
+                      alt="Zoomable"
+                      style="width: 300px; height: 180px"
+                    />
+                  </div>
+                  <div class="image">
+                    <img
+                      class="img-sert"
+                      onclick="toggleBackdrop(this);"
+                      src="/img/sertif_python.png"
+                      alt="Zoomable"
+                      style="width: 300px; height: 180px"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="sert-container d-flex justify-content-start align-items-start flex-row gap-4"
+                >
+                  <div class="image">
+                    <img
+                      class="img-sert"
+                      onclick="toggleBackdrop(this)"
+                      src="/img/sertif_sql.png"
+                      alt="Zoomable"
+                      style="width: 300px; height: 180px"
+                    />
+                  </div>
+                  <div class="image">
+                    <img
+                      class="img-sert"
+                      onclick="toggleBackdrop(this);"
+                      src="/img/sertif_visdat.png"
+                      alt="Zoomable"
+                      style="width: 300px; height: 180px"
+                    />
+                  </div>
+                  <div class="image">
+                    <img
+                      class="img-sert"
+                      onclick="toggleBackdrop(this);"
+                      src="/img/sertif_dasar_AI.png"
+                      alt="Zoomable"
+                      style="width: 300px; height: 180px"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="sert-container d-flex justify-content-start align-items-start flex-row gap-4"
+                >
+                  <div class="image">
+                    <img
+                      class="img-sert"
+                      onclick="toggleBackdrop(this)"
+                      src="/img/sertif_alibaba.png"
+                      alt="Zoomable"
+                      style="width: 300px; height: 180px"
+                    />
+                  </div>
+                  <div class="image">
+                    <img
+                      class="img-sert"
+                      onclick="toggleBackdrop(this);"
+                      src="/img/sertif_dasarweb.png"
+                      alt="Zoomable"
+                      style="width: 300px; height: 180px"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -795,9 +895,11 @@
                 using Vue.js for the front-end and FastAPI for the back-end.
               </div>
               <div class="githublink">
-                <a href="https://github.com/rafipasya22/waduh_news.git" class="buttonconnect smoothscroll"
-                  >See Project on GitHub</a
-                >
+                <a
+                  href="https://github.com/rafipasya22/waduh_news.git"
+                  class="buttonconnect smoothscroll"
+                  >See Project on GitHub <i class="fab fa-github"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -817,9 +919,11 @@
                 engaging Quran Learning.
               </div>
               <div class="githublink">
-                <a href="https://github.com/rafipasya22/Batuq.git" class="buttonconnect smoothscroll"
-                  >See Project on GitHub</a
-                >
+                <a
+                  href="https://github.com/rafipasya22/Batuq.git"
+                  class="buttonconnect smoothscroll"
+                  >See Project on GitHub <i class="fab fa-github"></i
+                ></a>
               </div>
             </div>
             <div id="batuq" class="carousel slide" style="width: 70%">
@@ -974,9 +1078,11 @@
                 devices.
               </div>
               <div class="githublink">
-                <a href="https://github.com/rafipasya22/SimpleSync-Web-.git" class="buttonconnect smoothscroll"
-                  >See Project on GitHub</a
-                >
+                <a
+                  href="https://github.com/rafipasya22/SimpleSync-Web-.git"
+                  class="buttonconnect smoothscroll"
+                  >See Project on GitHub <i class="fab fa-github"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -997,7 +1103,11 @@
                 wearable devices, but for mobile devices.
               </div>
               <div class="githublink">
-                <a href="https://github.com/rafipasya22/SimpleSync-Mobile-.git" class="buttonconnect smoothscroll">See Project</a>
+                <a
+                  href="https://github.com/rafipasya22/SimpleSync-Mobile-.git"
+                  class="buttonconnect smoothscroll"
+                  >See Project <i class="fab fa-github"></i
+                ></a>
               </div>
             </div>
             <div
@@ -1097,7 +1207,7 @@
                     class="phonenumbercontent d-flex justify-content-start align-items-start flex-column"
                   >
                     <small>Phone Number</small>
-                    <p style="margin: 0; font-weight: bold">088971935033</p>
+                    <p style="margin: 0; font-weight: bold">0889XXXX5033</p>
                   </div>
                 </div>
                 <div
@@ -1138,12 +1248,12 @@
                 class="location d-flex justify-content-center align-items-start flex-row gap-3"
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.939174946133!2d107.6075975!3d-6.8978786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e64534cfa3f5%3A0x582bf998c07282f0!2sJl.%20Kebon%20Bibit%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040116!5e0!3m2!1sen!2sid!4v1730214809251!5m2!1sen!2sid"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31686.4353693075!2d107.60693699946289!3d-6.913972573450685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1751375296275!5m2!1sen!2sid"
                   style="
                     border: 0;
                     border-radius: 15px;
-                    width: 60%;
-                    height: 250px;
+                    width: 800px;
+                    height: 400px;
                   "
                   allowfullscreen=""
                   loading="lazy"
@@ -1160,10 +1270,7 @@
                     <span class="material-symbols-outlined"> location_on </span
                     >Location
                   </div>
-                  <p>
-                    Jl. Kebon Bibit No. 238/A, Taman Sari, Kec. Bandung Wetan,
-                    Kota Bandung
-                  </p>
+                  <p>Kota Bandung</p>
 
                   <a
                     href="https://www.linkedin.com/in/muhamad-rafi-pasya-martadisastra-3561082b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
@@ -1505,6 +1612,31 @@
         document.querySelector(".menu-bottom").classList.add("show");
         document.body.classList.add("noscroll");
         document.documentElement.classList.add("noscroll");
+      }
+      function bukabackdrop(img) {
+        document.getElementById("backdrop-image").classList.remove("d-none");
+        img.classList.add("clicked");
+      }
+
+      function tutupbackdrop(img) {
+        document.getElementById("backdrop-image").classList.add("d-none");
+        img.classList.remove("clicked");
+      }
+
+      function tutupbackdropuniversal() {
+        document.getElementById("backdrop-image").classList.add("d-none");
+        document.querySelector(".img-sert.clicked").classList.remove("clicked");
+      }
+
+      function toggleBackdrop(img) {
+        if (img.classList.contains("clicked")) {
+          tutupbackdrop(img);
+        } else {
+          document.querySelectorAll(".img-sert.clicked").forEach((el) => {
+            el.classList.remove("clicked");
+          });
+          bukabackdrop(img);
+        }
       }
 
       function hidemenu() {
